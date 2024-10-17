@@ -1,0 +1,23 @@
+{
+  "extends": "../../../tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": "./",
+    "emitDecoratorMetadata": true,
+    "declaration": false,
+    "paths": {
+      "@libs/*": ["../../libs/*"],
+      "@apps/*": ["../../apps/*"]
+    }
+  },
+  "include": [
+    "**.ts",
+    "functions/*.ts",
+    "services/**.ts",
+    "interfaces/**.ts",
+    "dto/**.ts",
+    "**/*.spec.ts"
+  ],
+  "ts-node": {
+    "require": ["tsconfig-paths/register"]
+  }
+}
